@@ -1,9 +1,7 @@
-package com.example.loginsb;
-
-
+package com.example.loginsb.model;
 
 public class User {
-    private String id;
+    private Long id;
 
     private String name;
 
@@ -12,17 +10,17 @@ public class User {
     public User() {
     }
 
-    public User(String id, String name, String password) {
+    public User(Long id, String name, String password) {
         this.id = id;
         this.name = name;
         this.password = password;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -40,5 +38,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }
